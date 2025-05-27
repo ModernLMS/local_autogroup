@@ -89,7 +89,7 @@ class user_info_field_multivalue extends sort_module {
         global $DB;
 
         $options = [];
-        $infofields = $DB->get_records('user_info_field', ['datatype' => 'text']);
+        $infofields = $DB->get_records('user_info_field', ['datatype' => 'multiselect']);
 
         foreach ($infofields as $field) {
             $options[$field->id] = $field->name;
